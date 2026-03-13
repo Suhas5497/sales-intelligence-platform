@@ -194,11 +194,7 @@ This is the easiest way for a recruiter or reviewer to inspect the warehouse out
 The repository includes Power BI dashboard files as companion BI assets:
 
 - `SALES INTELLIGENCE DASHBOARD.pbix`
-- `SALES ANALYSIS DASHBOARD.pbix`
 
-Recommended report title for portfolio presentation:
-
-- `Retail Sales Analysis Dashboard`
 
 Power BI skills demonstrated in these reports:
 
