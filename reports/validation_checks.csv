@@ -1,0 +1,21 @@
+stage,check_name,status,metric_value,details
+raw,orders_non_empty,pass,300000,Orders dataset should not be empty.
+raw,customers_non_empty,pass,25000,Customers dataset should not be empty.
+raw,products_non_empty,pass,168,Products dataset should not be empty.
+raw,duplicate_order_ids,pass,0,Order IDs should be unique at the raw ingestion stage.
+raw,duplicate_customer_ids,pass,0,Customer IDs should be unique in the customer master.
+raw,duplicate_product_ids,pass,0,Product IDs should be unique in the product master.
+raw,orders_missing_values,pass,0,Transactional source data should not contain missing values.
+raw,customer_key_alignment,pass,0,Every transactional customer must exist in the customer master.
+raw,product_key_alignment,pass,0,Every transactional product must exist in the product master.
+processed,cleaned_non_empty,pass,300000,Processed orders should contain at least one row.
+processed,cleaned_null_values,pass,0,Cleaned orders should not contain null values.
+processed,positive_quantity,pass,0,Quantities must remain positive after cleaning.
+processed,positive_price,pass,0,Prices must remain positive after cleaning.
+processed,revenue_consistency,pass,0,Revenue should equal quantity multiplied by price for every order.
+warehouse,fact_non_empty,pass,300000,The fact table should contain transaction rows.
+warehouse,customer_fk_integrity,pass,0,Every customer key in the fact table must exist in the customer dimension.
+warehouse,product_fk_integrity,pass,0,Every product key in the fact table must exist in the product dimension.
+warehouse,date_fk_integrity,pass,0,Every date key in the fact table must exist in the date dimension.
+warehouse,date_dimension_daily_grain,pass,0,The date dimension should contain exactly one row per calendar day.
+warehouse,fact_row_reconciliation,pass,300000,Fact row count should reconcile with the cleaned orders dataset.

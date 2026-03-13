@@ -1,0 +1,5 @@
+segment,customers,avg_orders_per_customer,avg_revenue_per_customer,avg_units_per_customer,repeat_customer_rate_pct,total_revenue
+Corporate,6420,12.22,419857.39,19.41,65.7,2695484465.0
+Small Business,6337,12.13,410225.94,18.92,64.79,2599601761.0
+Consumer,6217,11.61,328515.82,15.23,64.66,2042382847.0
+Student,6026,12.04,315800.35,14.52,64.82,1903012913.0

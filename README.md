@@ -1,298 +1,311 @@
-# Sales Intelligence Analytics Platform
+# Retail Sales Intelligence Platform
 
-## End-to-End Data Analytics System for Large-Scale Retail Sales Intelligence
+Retail Sales Intelligence Platform is an end-to-end analytics engineering project built for Data Analyst and Data Engineer portfolio use. It takes retail transaction data from raw CSV files to a cleaned analytical dataset, star-schema warehouse, business SQL layer, and an interactive Streamlit dashboard.
 
-This project simulates a production-grade analytics workflow used by modern data teams.
-It processes 5 million e-commerce transactions and transforms raw operational data into business intelligence dashboards, predictive insights, and automated analytics pipelines.
+The project is intentionally positioned as a non-ML analytics system. The focus is on data quality, warehouse modeling, KPI design, SQL analysis, and stakeholder-ready reporting.
 
-The system demonstrates the complete lifecycle of analytics engineering:
+## Project Goals
 
-Data Generation → Data Engineering → Data Warehouse → SQL Analytics → BI Dashboard → Forecasting → Anomaly Detection
-## Project Highlights
+- Build a reproducible retail analytics pipeline from raw data to reporting outputs.
+- Model a star-schema warehouse suitable for business intelligence workloads.
+- Surface analyst-grade KPIs such as revenue, orders, AOV, repeat rate, and city/category contribution.
+- Provide a reviewer-friendly Streamlit dashboard on top of the warehouse.
+- Keep the repo runnable and honest about what is implemented.
 
-#### 5M+ transactions processed
+## Current Dataset
 
-#### Star schema analytics warehouse
+The repository currently includes a synthetic retail dataset with the following scale:
 
-#### Production-style ETL pipeline
+| Table | Records |
+| --- | ---: |
+| `orders.csv` | 300,000 |
+| `customers.csv` | 25,000 |
+| `products.csv` | 168 |
 
-#### SQL business intelligence layer
+Source schema:
 
-#### Interactive Power BI dashboard
-
-#### Sales forecasting model
-
-#### Revenue anomaly detection
-
-This project demonstrates how raw transactional data becomes decision-ready business intelligence.
+- `orders.csv`: `order_id`, `customer_id`, `product_id`, `quantity`, `price`, `order_date`, `city`, `segment`
+- `customers.csv`: `customer_id`, `city`, `segment`
+- `products.csv`: `product_id`, `product_name`, `category`, `price`
 
 ## Architecture
-    Synthetic E-commerce Dataset
-        ↓
-    Data Quality Validation
-        ↓
-    ETL Pipeline (Data Cleaning + Feature Engineering)
-        ↓
-    Star Schema Data Warehouse
-        ↓
-    SQL Analytics Layer
-        ↓
-    Power BI Executive Dashboard
-        ↓
-    Sales Forecasting Model
-        ↓
-    Revenue Anomaly Detection
-        ↓
-    Automated Pipeline Scheduler
-## Dataset
 
-The project uses a realistic synthetic e-commerce dataset designed to simulate real retail behavior.
+```text
+Raw CSV Sources
+    -> Data Cleaning
+    -> Feature Engineering
+    -> Data Quality Validation
+    -> Star Schema Warehouse (CSV + DuckDB)
+    -> SQL Analytics Layer
+    -> Streamlit Dashboard
+    -> Optional Power BI Report
+```
 
-- Dataset Scale
-- Table	Records
-- Products	1,200
-- Customers	300,000
-- Orders	5,000,000
-- Realistic Data Simulation
-
-The dataset includes realistic business patterns:
-
-- 50+ Indian cities
-
-- 13 product categories
-
-- Realistic price distributions
-
-- UPI-dominant payment methods
-
-- Peak shopping hours
-
-- Product popularity (Pareto distribution)
-
-- Weekend sales boost
-
-- Customer loyalty behavior
-
-- Discounts and returns
-
-## Key Fields
-    order_id
-    product_id
-    customer_id
-    product_name
-    category
-    city
-    segment
-    order_datetime
-    payment_method
-    quantity
-    price
-    discount
-    revenue
-    order_status
 ## Tech Stack
-### Layer	Tools
-- Data Engineering :   	Python, Pandas, NumPy
-- Data Warehouse :    	DuckDB
-- Analytics :         	SQL      
-- Visualization :     	Power BI
-- Forecasting :       	Prophet
-- Automation :         	Python Scheduler
-- Version Control :     Git & GitHub
-##  Project Structure
-      #### sales-intelligence-platform
 
-      data/
-           raw/
-               orders.csv
-               customers.csv
-               products.csv
-           processed/
+- Python
+- Pandas
+- NumPy
+- DuckDB
+- SQL
+- Streamlit
+- Plotly
+- Power BI
 
-      warehouse/
-              fact_sales.csv
-              dim_product.csv
-              dim_customer.csv
-              dim_date.csv
+## Repository Structure
 
-      src/
-              data_generation.py
-              data_quality.py
-              pipeline.py
-              feature_engineering.py
-              warehouse_builder.py
-              forecasting.py
-              anomaly_detection.py
-              scheduler.py
+```text
+sales-intelligence-platform/
+|-- app/
+|   `-- streamlit_app.py
+|-- data/
+|   |-- raw/
+|   |   |-- customers.csv
+|   |   |-- orders.csv
+|   |   `-- products.csv
+|   `-- processed/
+|       `-- cleaned_orders.csv
+|-- reports/
+|   |-- pipeline_summary.json
+|   |-- validation_checks.csv
+|   |-- warehouse_summary.csv
+|   `-- query_outputs/
+|-- scripts/
+|   |-- __init__.py
+|   `-- generate_dataset.py
+|-- sql/
+|   |-- 01_kpi_metrics.sql
+|   |-- 02_sales_trends.sql
+|   |-- 03_product_analysis.sql
+|   |-- 04_city_analysis.sql
+|   |-- 05_customer_analysis.sql
+|   |-- 06_time_analysis.sql
+|   |-- 07_advanced_analysis.sql
+|   `-- warehouse_schema.sql
+|-- src/
+|   |-- __init__.py
+|   |-- config.py
+|   |-- data_cleaning.py
+|   |-- data_generation.py
+|   |-- data_loader.py
+|   |-- data_validation.py
+|   |-- feature_engineering.py
+|   |-- load_warehouse.py
+|   |-- logger.py
+|   |-- pipeline.py
+|   |-- run_queries.py
+|   `-- warehouse_builder.py
+|-- warehouse/
+|   |-- dim_customer.csv
+|   |-- dim_date.csv
+|   |-- dim_product.csv
+|   |-- fact_sales.csv
+|   `-- sales.duckdb
+|-- SALES ANALYSIS DASHBOARD.pbix
+|-- SALES INTELLIGENCE DASHBOARD.pbix
+|-- README.md
+`-- requirements.txt
+```
 
-      sql/
-              warehouse_schema.sql
-              01_kpi_metrics.sql
-              02_sales_trends.sql
-              03_product_analysis.sql
-              04_city_analysis.sql
-              05_customer_analysis.sql
-              06_time_analysis.sql
-              07_advanced_analysis.sql
+## Data Pipeline
 
-      dashboard/
-              sales_intelligence_dashboard.pbix
-## Analytics Warehouse Design
+### 1. Raw Data Ingestion
 
-### The project implements a Star Schema optimized for analytical queries.
+`src/data_loader.py` loads the source CSV files and parses the transactional timestamp field.
 
-#### Fact Table
-- fact_sales
+### 2. Data Cleaning
 
-#### Contains transactional metrics:
+`src/data_cleaning.py` performs:
 
-order_id
+- required-column checks
+- type coercion
+- duplicate removal on `order_id`
+- null handling
+- positive quantity and price validation
+- standardization of customer, city, and segment values
 
-product_id
+### 3. Feature Engineering
 
-customer_id
+`src/feature_engineering.py` adds:
 
-quantity
+- `revenue`
+- `date_key`
+- `date`
+- `year`, `quarter`, `month`, `month_name`
+- `weekday_number`, `weekday_name`
+- `hour`
+- `is_weekend`
+- `order_month`
 
-price
+### 4. Warehouse Modeling
 
-revenue
+`src/warehouse_builder.py` creates a star schema:
 
-Dimension Tables
+- `fact_sales`: one row per order transaction
+- `dim_product`: product master
+- `dim_customer`: customer master
+- `dim_date`: one row per calendar day
 
-dim_product
+The date dimension is modeled at daily grain for cleaner trend analysis and time intelligence.
 
-dim_customer
+### 5. Validation
 
-dim_date
+`src/data_validation.py` writes a data quality report covering:
 
-This schema enables fast analytical queries and scalable reporting.
+- empty dataset checks
+- duplicate business keys
+- missing values
+- customer/product key alignment
+- positive numeric checks
+- revenue consistency
+- fact-to-dimension foreign key integrity
+- daily-grain date dimension validation
 
-## SQL Analytics Layer
+### 6. Analytics Layer
 
-### The SQL layer answers key business questions.
+`src/run_queries.py` executes the SQL files in `sql/` and saves the outputs to `reports/query_outputs/`.
 
-#### Monthly Revenue Trend
-    SELECT year, month, SUM(revenue) AS revenue FROM fact_sales
-    GROUP BY year, month
-    ORDER BY year, month;
-#### Top Selling Products
-    SELECT product_id, SUM(revenue) AS revenue FROM fact_sales
-    GROUP BY product_id
-    ORDER BY revenue DESC
-    LIMIT 10;
-#### City Sales Performance
-    SELECT city, SUM(revenue) AS revenue FROM fact_sales
-    GROUP BY city
-    ORDER BY revenue DESC;
-## Power BI Dashboard
+## Business Questions Covered
 
-The Power BI dashboard provides executive-level business insights.
+The SQL layer answers questions such as:
 
-- Key KPIs
+- What are the current revenue, order, customer, and repeat-rate KPIs?
+- How is monthly revenue changing over time?
+- Which products contribute most to revenue?
+- Which cities drive the highest sales contribution?
+- How do customer segments differ on repeat behavior and revenue per customer?
+- Which weekday/hour combinations concentrate demand?
+- Which segment-city-category combinations should be prioritized?
 
-- Total Revenue
+## Streamlit Dashboard
 
-- Total Orders
+The Streamlit app in `app/streamlit_app.py` provides:
 
+- `Executive Overview`: KPI cards, monthly revenue, category mix, segment contribution
+- `Sales Trends`: order volume, active customers, weekday/hour demand heatmap
+- `Customer Insights`: repeat behavior, revenue per customer, top customers
+- `Product & Geography`: product Pareto view, city performance, top products
+- `Data Quality`: validation results from the pipeline
+
+This is the easiest way for a recruiter or reviewer to inspect the warehouse outputs without opening Power BI.
+
+## Power BI
+
+The repository includes Power BI dashboard files as companion BI assets:
+
+- `SALES INTELLIGENCE DASHBOARD.pbix`
+- `SALES ANALYSIS DASHBOARD.pbix`
+
+Recommended report title for portfolio presentation:
+
+- `Retail Sales Analysis Dashboard`
+
+Power BI skills demonstrated in these reports:
+
+- KPI card design for revenue, orders, units, and AOV
+- slicers for time, city, segment, and category analysis
+- cross-filtered sales trend analysis
+- city and segment breakdowns for executive reporting
+- business-facing dashboard storytelling on top of the warehouse layer
+
+### Power BI Dashboard Layout
+
+The current Power BI report is aligned to the warehouse and SQL outputs in this project and is structured as an executive sales analysis view.
+
+Key KPI cards:
+
+- Revenue
 - Units Sold
-
+- Total Orders
 - Average Order Value
 
-- Analytical Visualizations
+Interactive slicers:
+
+- Category
+- Product
+- City
+- Segment
+- Month
+- Year
+
+Business visuals included in the dashboard:
 
 - Monthly Revenue Growth Trend
-
+- Category Revenue Contribution
+- Customer Segment Revenue
 - Top Performing Products
+- Top Performing Product Categories
+- City Sales Distribution map
 
-- Category Contribution
+### Why This Strengthens The Project
 
-- Customer Segment Analysis
+Including Power BI in this project helps demonstrate that the same warehouse can support both:
 
-- Geographic Sales Distribution
+- Python-based analytics applications through Streamlit
+- stakeholder-facing BI reporting through Power BI
 
-- Product Category Performance
+For recruiters, this is useful because it shows both analytics engineering capability and practical dashboarding skill in a standard business intelligence tool.
 
-## Dashboard Preview
+Streamlit is the primary review path because it is easier to run from the repository, but the `.pbix` files are included to show hands-on BI reporting capability beyond Python dashboards.
 
-<img width="1284" height="723" alt="Screenshot 2026-03-10 233601" src="https://github.com/user-attachments/assets/a8bcfacd-675e-422e-b639-06adc99b840e" />
+### README Screenshot Placement
 
-## Sales Forecasting
+To show the Power BI dashboard directly in GitHub, export the report page as PNG and save it under:
 
-#### The project includes a time-series forecasting model using Prophet.
+- `reports/assets/powerbi_sales_analysis_dashboard.png`
+- `reports/assets/powerbi_sales_intelligence_dashboard.png`
 
-### Purpose
+After that, these images can be embedded in the README as dashboard previews.
 
-- Predict future sales trends
+## How To Run
 
-- Support inventory planning
+From the project root:
 
-- Identify seasonal patterns
+```bash
+pip install -r requirements.txt
+python -m src.pipeline
+streamlit run app/streamlit_app.py
+```
 
-Output file:
+Optional: regenerate the synthetic raw data first.
 
-    data/processed/sales_forecast.csv
-##  Anomaly Detection
+```bash
+python -m scripts.generate_dataset
+python -m src.pipeline
+```
 
-The project includes anomaly detection for identifying abnormal revenue spikes.
+## Generated Outputs
 
-### Method
-    Z-Score Statistical Detection
-#### Applications
+After running the pipeline, the project produces:
 
-- Fraud detection
+- `data/processed/cleaned_orders.csv`
+- `warehouse/dim_product.csv`
+- `warehouse/dim_customer.csv`
+- `warehouse/dim_date.csv`
+- `warehouse/fact_sales.csv`
+- `warehouse/sales.duckdb`
+- `reports/validation_checks.csv`
+- `reports/warehouse_summary.csv`
+- `reports/pipeline_summary.json`
+- `reports/query_outputs/*.csv`
 
-- Promotional spikes
+## Why This Project Is Strong For DA + DE Roles
 
-- Data quality monitoring
+- It shows end-to-end ownership from raw data to business reporting.
+- It demonstrates star-schema design and DuckDB loading.
+- It includes a validation layer instead of only transformation logic.
+- It exposes analyst-grade KPIs and business cuts through SQL and Streamlit.
+- It is runnable locally without hidden dependencies or inflated claims.
 
-Output file:
+## Next Improvements
 
-   data/processed/anomalies.csv
-## Running the Project
-#### Install dependencies
-    pip install -r requirements.txt
-#### Run ETL pipeline
-    python src/pipeline.py
-#### Load warehouse
-    python src/load_warehouse.py
-#### Run forecasting
-    python src/forecasting.py
-#### Run anomaly detection
-    python src/anomaly_detection.py
-## Key Business Insights
+Potential next steps without changing the non-ML focus:
 
-Example insights from the analysis:
+- add automated tests for pipeline and warehouse integrity
+- add a schema diagram and data dictionary
+- add scheduled refresh or orchestration metadata
+- add downloadable stakeholder reports from Streamlit
 
-- Electronics and Fashion drive the largest share of revenue.
+## Author
 
-- Evening hours generate the highest purchase activity.
-
-- Mega cities contribute the majority of sales volume.
-
-- Corporate customers have higher average order value.
-
-## Why This Project Matters
-
-#### This project demonstrates the complete analytics lifecycle used in real organizations:
-
-- Data engineering pipeline design
-
-- Analytics warehouse architecture
-
-- SQL business intelligence analysis
-
-- Interactive dashboard creation
-
-- Predictive analytics
-
-- Automated data workflows
-
-It reflects the real responsibilities of modern Data Analysts and Analytics Engineers.
-
-
-## 👤 Author
-
-### Suhas Dhamapurkar (AIML Engineer)
-
-### Data Analytics | Business Intelligence | Data Engineering 
+Suhas Dhamapurkar

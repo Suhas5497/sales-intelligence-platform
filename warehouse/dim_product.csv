@@ -1,169 +1,169 @@
 product_id,product_name,category,price
-1000,Smartphone Max,Electronics,950
-1001,Smartphone Max,Electronics,1190
-1002,Smartphone Pro,Electronics,6084
-1003,Laptop Pro,Electronics,29987
-1004,Laptop Lite,Electronics,20660
-1005,Laptop Lite,Electronics,18817
-1006,Tablet Pro,Electronics,4077
-1007,Tablet Plus,Electronics,8690
-1008,Tablet Plus,Electronics,76337
-1009,Smartwatch Max,Electronics,10688
-1010,Smartwatch Lite,Electronics,19587
-1011,Smartwatch Plus,Electronics,50514
-1012,Bluetooth Speaker Pro,Electronics,38524
-1013,Bluetooth Speaker Max,Electronics,7768
-1014,Bluetooth Speaker Max,Electronics,1424
-1015,Wireless Earbuds Max,Electronics,74583
-1016,Wireless Earbuds Max,Electronics,63639
-1017,Wireless Earbuds Pro,Electronics,19605
-1018,Gaming Console Plus,Electronics,38129
-1019,Gaming Console Plus,Electronics,12013
-1020,Gaming Console Max,Electronics,67975
-1021,Monitor Max,Electronics,68275
-1022,Monitor Pro,Electronics,29936
-1023,Monitor Pro,Electronics,970
-1024,Keyboard Max,Electronics,45696
-1025,Keyboard Pro,Electronics,47000
-1026,Keyboard Plus,Electronics,76399
-1027,Mouse Pro,Electronics,76321
-1028,Mouse Pro,Electronics,4137
-1029,Mouse Max,Electronics,36732
-1030,T-Shirt Plus,Fashion,32695
-1031,T-Shirt Plus,Fashion,1168
-1032,T-Shirt Pro,Fashion,43454
-1033,Jeans Plus,Fashion,6491
-1034,Jeans Lite,Fashion,45074
-1035,Jeans Plus,Fashion,69013
-1036,Jacket Plus,Fashion,47133
-1037,Jacket Pro,Fashion,72224
-1038,Jacket Max,Fashion,30260
-1039,Sneakers Max,Fashion,32418
-1040,Sneakers Plus,Fashion,43394
-1041,Sneakers Plus,Fashion,47282
-1042,Formal Shoes Max,Fashion,5594
-1043,Formal Shoes Max,Fashion,10095
-1044,Formal Shoes Max,Fashion,11765
-1045,Kurta Max,Fashion,68706
-1046,Kurta Max,Fashion,60610
-1047,Kurta Pro,Fashion,65784
-1048,Saree Max,Fashion,61891
-1049,Saree Plus,Fashion,4635
-1050,Saree Plus,Fashion,61575
-1051,Handbag Pro,Fashion,76635
-1052,Handbag Plus,Fashion,65942
-1053,Handbag Plus,Fashion,14991
-1054,Dress Plus,Fashion,72728
-1055,Dress Pro,Fashion,75513
-1056,Dress Max,Fashion,70474
-1057,Hoodie Lite,Fashion,6840
-1058,Hoodie Lite,Fashion,30584
-1059,Hoodie Max,Fashion,38017
-1060,Mixer Grinder Lite,Home Appliances,1047
-1061,Mixer Grinder Lite,Home Appliances,62516
-1062,Mixer Grinder Lite,Home Appliances,5323
-1063,Air Fryer Max,Home Appliances,36729
-1064,Air Fryer Plus,Home Appliances,24022
-1065,Air Fryer Lite,Home Appliances,73644
-1066,Vacuum Cleaner Pro,Home Appliances,42592
-1067,Vacuum Cleaner Plus,Home Appliances,62561
-1068,Vacuum Cleaner Lite,Home Appliances,9146
-1069,Microwave Pro,Home Appliances,2928
-1070,Microwave Plus,Home Appliances,55906
-1071,Microwave Lite,Home Appliances,12858
-1072,Induction Cooktop Max,Home Appliances,78762
-1073,Induction Cooktop Max,Home Appliances,19295
-1074,Induction Cooktop Lite,Home Appliances,23519
-1075,Electric Kettle Pro,Home Appliances,38531
-1076,Electric Kettle Plus,Home Appliances,2136
-1077,Electric Kettle Plus,Home Appliances,7307
-1078,Water Purifier Plus,Home Appliances,68521
-1079,Water Purifier Plus,Home Appliances,51769
-1080,Water Purifier Pro,Home Appliances,28576
-1081,Office Chair Lite,Furniture,51517
-1082,Office Chair Max,Furniture,65781
-1083,Office Chair Max,Furniture,62000
-1084,Study Table Lite,Furniture,19013
-1085,Study Table Plus,Furniture,30817
-1086,Study Table Lite,Furniture,24412
-1087,Bookshelf Lite,Furniture,45040
-1088,Bookshelf Pro,Furniture,11521
-1089,Bookshelf Lite,Furniture,27654
-1090,Wardrobe Lite,Furniture,52206
-1091,Wardrobe Plus,Furniture,47226
-1092,Wardrobe Pro,Furniture,64881
-1093,Coffee Table Pro,Furniture,21494
-1094,Coffee Table Plus,Furniture,55302
-1095,Coffee Table Plus,Furniture,27906
-1096,Sofa Max,Furniture,12788
-1097,Sofa Plus,Furniture,43388
-1098,Sofa Max,Furniture,38752
-1099,Facewash Plus,Beauty,35564
-1100,Facewash Plus,Beauty,57669
-1101,Facewash Lite,Beauty,24786
-1102,Moisturizer Plus,Beauty,51807
-1103,Moisturizer Max,Beauty,4767
-1104,Moisturizer Pro,Beauty,42819
-1105,Perfume Pro,Beauty,10198
-1106,Perfume Pro,Beauty,62922
-1107,Perfume Max,Beauty,46956
-1108,Shampoo Pro,Beauty,77711
-1109,Shampoo Plus,Beauty,17445
-1110,Shampoo Lite,Beauty,59782
-1111,Conditioner Lite,Beauty,33285
-1112,Conditioner Plus,Beauty,56209
-1113,Conditioner Lite,Beauty,36507
-1114,Sunscreen Max,Beauty,68099
-1115,Sunscreen Pro,Beauty,52236
-1116,Sunscreen Lite,Beauty,63391
-1117,Hair Oil Max,Beauty,47455
-1118,Hair Oil Pro,Beauty,6614
-1119,Hair Oil Max,Beauty,35479
-1120,Yoga Mat Max,Sports,13411
-1121,Yoga Mat Pro,Sports,52443
-1122,Yoga Mat Pro,Sports,33261
-1123,Dumbbells Max,Sports,5305
-1124,Dumbbells Max,Sports,67206
-1125,Dumbbells Pro,Sports,54660
-1126,Treadmill Max,Sports,42541
-1127,Treadmill Pro,Sports,48957
-1128,Treadmill Max,Sports,39033
-1129,Cricket Bat Plus,Sports,74527
-1130,Cricket Bat Max,Sports,41319
-1131,Cricket Bat Lite,Sports,13983
-1132,Football Lite,Sports,70510
-1133,Football Pro,Sports,47319
-1134,Football Max,Sports,45496
-1135,Badminton Racket Plus,Sports,66048
-1136,Badminton Racket Plus,Sports,11850
-1137,Badminton Racket Lite,Sports,2684
-1138,Fiction Novel Max,Books,29097
-1139,Fiction Novel Lite,Books,63288
-1140,Fiction Novel Lite,Books,4245
-1141,Science Book Max,Books,66502
-1142,Science Book Pro,Books,34964
-1143,Science Book Plus,Books,69740
-1144,Self Help Book Plus,Books,6893
-1145,Self Help Book Lite,Books,44025
-1146,Self Help Book Max,Books,48270
-1147,Business Book Plus,Books,1078
-1148,Business Book Lite,Books,71763
-1149,Business Book Plus,Books,8164
-1150,Programming Book Plus,Books,20500
-1151,Programming Book Plus,Books,6787
-1152,Programming Book Pro,Books,5227
-1153,Backpack Plus,Accessories,35567
-1154,Backpack Max,Accessories,49308
-1155,Backpack Lite,Accessories,48052
-1156,Laptop Bag Pro,Accessories,65785
-1157,Laptop Bag Lite,Accessories,24640
-1158,Laptop Bag Lite,Accessories,76724
-1159,Sunglasses Pro,Accessories,69336
-1160,Sunglasses Pro,Accessories,32372
-1161,Sunglasses Lite,Accessories,6598
-1162,Wallet Pro,Accessories,13830
-1163,Wallet Max,Accessories,44337
-1164,Wallet Pro,Accessories,44817
-1165,Travel Bag Pro,Accessories,7305
-1166,Travel Bag Pro,Accessories,16411
-1167,Travel Bag Max,Accessories,65000
+1000,Smartphone Max 1,Electronics,11060
+1001,Smartphone Pro 1,Electronics,61386
+1002,Laptop Pro 1,Electronics,52611
+1003,Laptop Lite 1,Electronics,36758
+1004,Noise Cancelling Headphones 1,Electronics,36327
+1005,Tablet Air 1,Electronics,67607
+1006,Smart Watch 1,Electronics,10817
+1007,Bluetooth Speaker 1,Electronics,55757
+1008,Gaming Console 1,Electronics,19308
+1009,Wireless Router 1,Electronics,11422
+1010,Smartphone Max 2,Electronics,43196
+1011,Smartphone Pro 2,Electronics,76209
+1012,Laptop Pro 2,Electronics,58578
+1013,Laptop Lite 2,Electronics,60444
+1014,Noise Cancelling Headphones 2,Electronics,57235
+1015,Tablet Air 2,Electronics,62276
+1016,Smart Watch 2,Electronics,42222
+1017,Bluetooth Speaker 2,Electronics,13916
+1018,Gaming Console 2,Electronics,66222
+1019,Wireless Router 2,Electronics,37603
+1020,Smartphone Max 3,Electronics,41276
+1021,Smartphone Pro 3,Electronics,31754
+1022,Laptop Pro 3,Electronics,17917
+1023,Laptop Lite 3,Electronics,72618
+1024,Noise Cancelling Headphones 3,Electronics,61945
+1025,Tablet Air 3,Electronics,51824
+1026,Smart Watch 3,Electronics,34077
+1027,Bluetooth Speaker 3,Electronics,64973
+1028,Gaming Console 3,Electronics,44589
+1029,Wireless Router 3,Electronics,37091
+1030,Smartphone Max 4,Electronics,37609
+1031,Smartphone Pro 4,Electronics,21202
+1032,Laptop Pro 4,Electronics,11272
+1033,Laptop Lite 4,Electronics,45262
+1034,Noise Cancelling Headphones 4,Electronics,69760
+1035,Tablet Air 4,Electronics,9190
+1036,Smart Watch 4,Electronics,67585
+1037,Bluetooth Speaker 4,Electronics,65331
+1038,Gaming Console 4,Electronics,24842
+1039,Wireless Router 4,Electronics,50927
+1040,Classic Denim Jacket 1,Fashion,1990
+1041,Everyday Sneakers 1,Fashion,5904
+1042,Premium Hoodie 1,Fashion,5524
+1043,Athleisure Joggers 1,Fashion,3240
+1044,Formal Shirt 1,Fashion,1348
+1045,Leather Belt 1,Fashion,7307
+1046,Running Shorts 1,Fashion,3841
+1047,Canvas Tote 1,Fashion,6795
+1048,Summer Dress 1,Fashion,5374
+1049,Travel Backpack 1,Fashion,6038
+1050,Classic Denim Jacket 2,Fashion,5916
+1051,Everyday Sneakers 2,Fashion,2184
+1052,Premium Hoodie 2,Fashion,3302
+1053,Athleisure Joggers 2,Fashion,3980
+1054,Formal Shirt 2,Fashion,4185
+1055,Leather Belt 2,Fashion,1189
+1056,Running Shorts 2,Fashion,4507
+1057,Canvas Tote 2,Fashion,1918
+1058,Summer Dress 2,Fashion,5807
+1059,Travel Backpack 2,Fashion,5408
+1060,Classic Denim Jacket 3,Fashion,6989
+1061,Everyday Sneakers 3,Fashion,5816
+1062,Premium Hoodie 3,Fashion,3320
+1063,Athleisure Joggers 3,Fashion,7286
+1064,Formal Shirt 3,Fashion,3612
+1065,Leather Belt 3,Fashion,3050
+1066,Running Shorts 3,Fashion,6877
+1067,Canvas Tote 3,Fashion,3345
+1068,Summer Dress 3,Fashion,1403
+1069,Travel Backpack 3,Fashion,3999
+1070,Classic Denim Jacket 4,Fashion,6152
+1071,Everyday Sneakers 4,Fashion,2150
+1072,Premium Hoodie 4,Fashion,3955
+1073,Athleisure Joggers 4,Fashion,1757
+1074,Air Fryer 1,Home Appliances,17354
+1075,Mixer Grinder 1,Home Appliances,12885
+1076,Vacuum Cleaner 1,Home Appliances,9800
+1077,Water Purifier 1,Home Appliances,7610
+1078,Coffee Machine 1,Home Appliances,14767
+1079,Room Heater 1,Home Appliances,17000
+1080,Air Cooler 1,Home Appliances,22735
+1081,Air Fryer 2,Home Appliances,12068
+1082,Mixer Grinder 2,Home Appliances,6206
+1083,Vacuum Cleaner 2,Home Appliances,20453
+1084,Water Purifier 2,Home Appliances,16151
+1085,Coffee Machine 2,Home Appliances,17646
+1086,Room Heater 2,Home Appliances,4861
+1087,Air Cooler 2,Home Appliances,9422
+1088,Air Fryer 3,Home Appliances,19079
+1089,Mixer Grinder 3,Home Appliances,20444
+1090,Vacuum Cleaner 3,Home Appliances,12027
+1091,Water Purifier 3,Home Appliances,19861
+1092,Coffee Machine 3,Home Appliances,20644
+1093,Room Heater 3,Home Appliances,11014
+1094,Air Cooler 3,Home Appliances,21840
+1095,Air Fryer 4,Home Appliances,8912
+1096,Skincare Kit 1,Beauty,1572
+1097,Hair Dryer 1,Beauty,3278
+1098,Makeup Palette 1,Beauty,3102
+1099,Face Serum 1,Beauty,1188
+1100,Body Lotion 1,Beauty,3856
+1101,Perfume Gift Set 1,Beauty,1419
+1102,Beard Grooming Kit 1,Beauty,3749
+1103,Skincare Kit 2,Beauty,678
+1104,Hair Dryer 2,Beauty,3718
+1105,Makeup Palette 2,Beauty,3680
+1106,Face Serum 2,Beauty,3655
+1107,Body Lotion 2,Beauty,3210
+1108,Perfume Gift Set 2,Beauty,2466
+1109,Beard Grooming Kit 2,Beauty,3365
+1110,Skincare Kit 3,Beauty,1717
+1111,Hair Dryer 3,Beauty,3656
+1112,Makeup Palette 3,Beauty,2789
+1113,Face Serum 3,Beauty,2417
+1114,Office Chair 1,Furniture,16135
+1115,Study Desk 1,Furniture,17650
+1116,Bookshelf 1,Furniture,4894
+1117,Storage Cabinet 1,Furniture,7355
+1118,Side Table 1,Furniture,9891
+1119,TV Unit 1,Furniture,6748
+1120,Office Chair 2,Furniture,14551
+1121,Study Desk 2,Furniture,20042
+1122,Bookshelf 2,Furniture,19706
+1123,Storage Cabinet 2,Furniture,15306
+1124,Side Table 2,Furniture,24522
+1125,TV Unit 2,Furniture,17566
+1126,Office Chair 3,Furniture,5900
+1127,Study Desk 3,Furniture,22360
+1128,Bookshelf 3,Furniture,17790
+1129,Storage Cabinet 3,Furniture,19233
+1130,Side Table 3,Furniture,17569
+1131,Yoga Mat 1,Sports,12715
+1132,Cricket Kit 1,Sports,3083
+1133,Fitness Band 1,Sports,12832
+1134,Treadmill Lite 1,Sports,17734
+1135,Dumbbell Set 1,Sports,7522
+1136,Cycling Helmet 1,Sports,13739
+1137,Yoga Mat 2,Sports,1841
+1138,Cricket Kit 2,Sports,8428
+1139,Fitness Band 2,Sports,10284
+1140,Treadmill Lite 2,Sports,21641
+1141,Dumbbell Set 2,Sports,5663
+1142,Cycling Helmet 2,Sports,6952
+1143,Yoga Mat 3,Sports,9697
+1144,Cricket Kit 3,Sports,21848
+1145,Fitness Band 3,Sports,18951
+1146,Business Strategy Book 1,Books,393
+1147,Python for Analysts 1,Books,642
+1148,Leadership Playbook 1,Books,1377
+1149,Personal Finance Guide 1,Books,422
+1150,Design Thinking Handbook 1,Books,1420
+1151,Business Strategy Book 2,Books,702
+1152,Python for Analysts 2,Books,1497
+1153,Leadership Playbook 2,Books,717
+1154,Personal Finance Guide 2,Books,893
+1155,Design Thinking Handbook 2,Books,1178
+1156,Business Strategy Book 3,Books,507
+1157,Python for Analysts 3,Books,1046
+1158,Phone Case 1,Accessories,2849
+1159,Laptop Sleeve 1,Accessories,4174
+1160,Travel Organizer 1,Accessories,5182
+1161,Desk Lamp 1,Accessories,3606
+1162,USB Hub 1,Accessories,2394
+1163,Phone Case 2,Accessories,2380
+1164,Laptop Sleeve 2,Accessories,2435
+1165,Travel Organizer 2,Accessories,4317
+1166,Desk Lamp 2,Accessories,1976
+1167,USB Hub 2,Accessories,1243

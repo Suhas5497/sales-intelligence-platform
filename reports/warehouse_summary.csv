@@ -1,0 +1,4 @@
+stage,status,check_count
+processed,pass,5
+raw,pass,9
+warehouse,pass,6

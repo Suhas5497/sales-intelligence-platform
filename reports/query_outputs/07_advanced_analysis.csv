@@ -1,0 +1,26 @@
+priority_rank,segment,city,category,total_revenue,total_orders,active_customers,avg_order_value,revenue_share_pct
+1,Corporate,Thane,Electronics,99678438.0,1391,218,71659.55,1.18
+2,Small Business,Visakhapatnam,Electronics,92166646.0,1314,220,70142.04,1.1
+3,Corporate,Pune,Electronics,89378461.0,1221,195,73201.03,1.06
+4,Small Business,Varanasi,Electronics,87523389.0,1226,202,71389.39,1.04
+5,Corporate,Patna,Electronics,87262266.0,1186,206,73576.95,1.04
+6,Small Business,Vadodara,Electronics,86307786.0,1244,202,69379.25,1.03
+7,Small Business,Ranchi,Electronics,83159108.0,1191,194,69822.93,0.99
+8,Corporate,Raipur,Electronics,80932691.0,1151,197,70315.11,0.96
+9,Corporate,Nashik,Electronics,79811285.0,1117,178,71451.46,0.95
+10,Corporate,Vadodara,Electronics,79313366.0,1066,177,74402.78,0.94
+11,Corporate,Varanasi,Electronics,78456354.0,1062,184,73876.04,0.93
+12,Small Business,Noida,Electronics,77832124.0,1092,189,71274.84,0.92
+13,Corporate,Mumbai,Electronics,77739858.0,1104,187,70416.54,0.92
+14,Corporate,Surat,Electronics,76449788.0,1060,192,72122.44,0.91
+15,Corporate,Visakhapatnam,Electronics,74953022.0,1086,184,69017.52,0.89
+16,Small Business,Thane,Electronics,74737373.0,1052,192,71043.13,0.89
+17,Corporate,Indore,Electronics,72969231.0,1011,136,72175.3,0.87
+18,Corporate,Ranchi,Electronics,72843730.0,1004,180,72553.52,0.87
+19,Small Business,Nashik,Electronics,72632124.0,1017,177,71418.02,0.86
+20,Small Business,Surat,Electronics,71883161.0,1007,177,71383.48,0.85
+21,Small Business,Mumbai,Electronics,71552594.0,1019,147,70218.44,0.85
+22,Small Business,Raipur,Electronics,70550329.0,995,179,70904.85,0.84
+23,Small Business,Nagpur,Electronics,70229136.0,974,167,72103.84,0.83
+24,Small Business,Jodhpur,Electronics,70162442.0,967,161,72556.82,0.83
+25,Student,Bhopal,Electronics,69979630.0,1272,98,55015.43,0.83

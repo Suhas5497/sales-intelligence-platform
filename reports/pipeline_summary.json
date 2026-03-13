@@ -1,0 +1,18 @@
+{
+  "cleaned_order_rows": 300000,
+  "warehouse_rows": {
+    "dim_product": 168,
+    "dim_customer": 25000,
+    "dim_date": 365,
+    "fact_sales": 300000
+  },
+  "query_output_files": [
+    "01_kpi_metrics.csv",
+    "02_sales_trends.csv",
+    "03_product_analysis.csv",
+    "04_city_analysis.csv",
+    "05_customer_analysis.csv",
+    "06_time_analysis.csv",
+    "07_advanced_analysis.csv"
+  ]
+}
