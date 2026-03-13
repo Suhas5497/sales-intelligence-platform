@@ -248,7 +248,6 @@ Streamlit is the primary review path because it is easier to run from the reposi
 
 To show the Power BI dashboard directly in GitHub, export the report page as PNG and save it under:
 
-- `reports/assets/powerbi_sales_analysis_dashboard.png`
 - `reports/assets/powerbi_sales_intelligence_dashboard.png`
 
 After that, these images can be embedded in the README as dashboard previews.
