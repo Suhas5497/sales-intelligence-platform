@@ -6,6 +6,7 @@ from pathlib import Path
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+import plotly.io as pio
 import streamlit as st
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
@@ -20,6 +21,25 @@ from src.config import (  # noqa: E402
     VALIDATION_REPORT_FILE,
 )
 
+CHART_COLORS = ["#c9a96e", "#7aa2f7", "#6fcf97", "#e3b341", "#bb9af7", "#f2994a", "#56c2c9", "#e06c75"]
+GOLD_SCALE = [[0.0, "#0d1220"], [0.35, "#2b2a2a"], [0.7, "#8a7246"], [1.0, "#e2c48a"]]
+_axis = dict(automargin=True, gridcolor="#1d2438", linecolor="#1d2438", zerolinecolor="#1d2438", tickfont=dict(color="#a7a9b4"), title=dict(font=dict(color="#8a8d99")))
+pio.templates["midnight_gold"] = go.layout.Template(
+    layout=go.Layout(
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        font=dict(family="Inter, -apple-system, Segoe UI, sans-serif", color="#c9cbd3", size=12),
+        title=dict(font=dict(family="Playfair Display, Georgia, serif", size=17, color="#e8e6e1")),
+        colorway=CHART_COLORS,
+        xaxis=_axis,
+        yaxis=_axis,
+        legend=dict(bgcolor="rgba(0,0,0,0)", font=dict(color="#a7a9b4")),
+        hoverlabel=dict(bgcolor="#111729", bordercolor="#c9a96e", font=dict(color="#e8e6e1")),
+        coloraxis=dict(colorbar=dict(tickfont=dict(color="#a7a9b4"))),
+    )
+)
+pio.templates.default = "midnight_gold"
+
 
 PROJECT_NAME = "Retail Sales Intelligence Platform"
 PROJECT_SUBTITLE = (
@@ -30,7 +50,69 @@ PROJECT_SUBTITLE = (
 
 st.set_page_config(
     page_title=PROJECT_NAME,
+    page_icon="📊",
     layout="wide",
+)
+
+st.markdown(
+    """
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+    html, body, [class*="css"], .stApp { font-family: 'Inter', -apple-system, 'Segoe UI', sans-serif; }
+    .stApp {
+        background:
+            radial-gradient(1100px 520px at 100% -8%, rgba(201, 169, 110, 0.10), transparent 60%),
+            radial-gradient(900px 480px at -10% 105%, rgba(70, 96, 180, 0.14), transparent 60%),
+            #0a0e1a;
+    }
+    [data-testid="stHeader"] { background: transparent; }
+    h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif !important; font-weight: 500 !important; color: #e8e6e1 !important; letter-spacing: 0.2px; }
+    .block-container { padding-top: 2.2rem; }
+    .mg-hero {
+        position: relative; overflow: hidden;
+        background: linear-gradient(135deg, #141a2c 0%, #0d1220 60%);
+        border: 1px solid #1d2438; border-radius: 18px;
+        padding: 1.6rem 1.9rem 1.5rem; margin-bottom: 1.4rem;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+    .mg-hero::before { content: ""; position: absolute; left: 24px; right: 24px; top: 0; height: 2px; background: linear-gradient(90deg, #c9a96e, rgba(201, 169, 110, 0)); }
+    .mg-kicker { display: flex; justify-content: space-between; font-size: 0.72rem; font-weight: 700; letter-spacing: 3px; color: #c9a96e; text-transform: uppercase; }
+    .mg-kicker span { color: #8a8d99; font-weight: 600; }
+    .mg-title { font-family: 'Playfair Display', Georgia, serif; font-size: 2.35rem; line-height: 1.15; color: #e8e6e1; margin: 0.55rem 0 0.4rem; }
+    .mg-title em { color: #c9a96e; font-style: normal; }
+    .mg-copy { color: #a7a9b4; font-size: 1rem; max-width: 760px; margin: 0; }
+    .mg-chips { margin-top: 0.95rem; display: flex; flex-wrap: wrap; gap: 0.45rem; }
+    .mg-chips span { font-size: 0.78rem; color: #d6d4cf; background: #111729; border: 1px solid #232b42; border-radius: 999px; padding: 0.25rem 0.75rem; }
+    [data-testid="stMetric"] {
+        background: linear-gradient(135deg, #141a2c, #0d1220);
+        border: 1px solid #1d2438; border-radius: 14px; padding: 0.9rem 1.1rem;
+    }
+    [data-testid="stMetricLabel"] p, [data-testid="stMetricLabel"] div { color: #8a8d99 !important; text-transform: uppercase; letter-spacing: 1.1px; font-size: 0.72rem !important; }
+    [data-testid="stMetricValue"] { color: #c9a96e !important; font-family: 'Playfair Display', Georgia, serif; }
+    .stTabs [data-baseweb="tab-list"] { gap: 1.2rem; border-bottom: 1px solid #1d2438; }
+    .stTabs [data-baseweb="tab"] { color: #a7a9b4; font-weight: 600; }
+    .stTabs [aria-selected="true"] { color: #c9a96e !important; }
+    .stTabs [data-baseweb="tab-highlight"] { background-color: #c9a96e !important; }
+    [data-testid="stSidebar"] { background: #0b1020; border-right: 1px solid #1d2438; }
+    .stButton > button, .stDownloadButton > button, [data-testid="stFormSubmitButton"] > button {
+        background: #c9a96e; color: #0a0e1a; border: 1px solid #c9a96e; border-radius: 10px; font-weight: 700;
+    }
+    .stButton > button:hover, .stDownloadButton > button:hover, [data-testid="stFormSubmitButton"] > button:hover {
+        background: #d8bc86; border-color: #d8bc86; color: #0a0e1a;
+    }
+    .stButton > button *, .stDownloadButton > button *, [data-testid="stFormSubmitButton"] > button *,
+    button[kind="secondaryFormSubmit"] *, button[kind="primaryFormSubmit"] * { color: #0a0e1a !important; }
+    button[kind="secondaryFormSubmit"], button[kind="primaryFormSubmit"] { background: #c9a96e !important; border-color: #c9a96e !important; border-radius: 10px; }
+    [data-testid="stDataFrame"], [data-testid="stExpander"] { border: 1px solid #1d2438; border-radius: 12px; overflow: hidden; }
+    [data-testid="stExpander"] { background: #0d1220; }
+    hr { border-color: #1d2438 !important; }
+    code { color: #c9a96e !important; background: #111729 !important; }
+    .mg-footer { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid #1d2438; color: #8a8d99; font-size: 0.82rem; text-align: center; }
+    .mg-footer a { color: #c9a96e; text-decoration: none; }
+    
+    </style>
+    """,
+    unsafe_allow_html=True,
 )
 
 
@@ -135,8 +217,17 @@ def format_currency(value: float) -> str:
 
 
 def show_header() -> None:
-    st.title(PROJECT_NAME)
-    st.caption(PROJECT_SUBTITLE)
+    st.markdown(
+        """
+        <div class="mg-hero">
+            <div class="mg-kicker">Analytics Engineering · Retail<span>Suhas Dhamapurkar</span></div>
+            <div class="mg-title">Retail Sales <em>Intelligence</em> Platform</div>
+            <p class="mg-copy">300,000 orders taken from raw CSVs through validation into a star-schema warehouse, a business SQL layer and this interactive dashboard.</p>
+            <div class="mg-chips"><span>DuckDB warehouse</span><span>Star schema</span><span>SQL KPI layer</span><span>20/20 quality checks</span></div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
 
 def format_display_frame(
@@ -242,7 +333,7 @@ def executive_overview(df: pd.DataFrame) -> None:
             labels={"month_start": "Month", "total_revenue": "Revenue"},
         )
         fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, theme=None)
     with right:
         fig = px.bar(
             category.head(8),
@@ -253,7 +344,7 @@ def executive_overview(df: pd.DataFrame) -> None:
             labels={"total_revenue": "Revenue", "category": "Category"},
         )
         fig.update_layout(yaxis={"categoryorder": "total ascending"}, margin=dict(l=10, r=10, t=50, b=10))
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, theme=None)
 
     insight_one, insight_two = st.columns(2)
     with insight_one:
@@ -312,7 +403,7 @@ def sales_trends(df: pd.DataFrame) -> None:
             labels={"month_start": "Month", "total_orders": "Orders"},
         )
         fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, theme=None)
     with right:
         fig = px.line(
             revenue_monthly,
@@ -323,17 +414,17 @@ def sales_trends(df: pd.DataFrame) -> None:
             labels={"month_start": "Month", "active_customers": "Customers"},
         )
         fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, theme=None)
 
     fig = px.imshow(
         heatmap,
         aspect="auto",
-        color_continuous_scale="Blues",
+        color_continuous_scale=GOLD_SCALE,
         title="Revenue Heatmap by Weekday and Hour",
         labels={"x": "Order Hour", "y": "Weekday", "color": "Revenue"},
     )
     fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, use_container_width=True, theme=None)
 
     peak_hour = daily_pattern.loc[daily_pattern["total_revenue"].idxmax()] if not daily_pattern.empty else None
     best_month = revenue_monthly.loc[revenue_monthly["total_revenue"].idxmax()] if not revenue_monthly.empty else None
@@ -378,7 +469,7 @@ def customer_insights(df: pd.DataFrame) -> None:
             labels={"avg_revenue_per_customer": "Revenue per Customer", "segment": "Segment"},
         )
         fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, theme=None)
     with right:
         fig = px.bar(
             segment_summary,
@@ -388,7 +479,7 @@ def customer_insights(df: pd.DataFrame) -> None:
             labels={"repeat_customer_rate": "Repeat Rate (%)", "segment": "Segment"},
         )
         fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, theme=None)
 
     top_customers = customer_summary.sort_values("total_revenue", ascending=False).head(15)
     st.subheader("Top Customers in Current View")
@@ -458,7 +549,7 @@ def product_geography(df: pd.DataFrame) -> None:
 
     left, right = st.columns((1.4, 1))
     with left:
-        st.plotly_chart(pareto, use_container_width=True)
+        st.plotly_chart(pareto, use_container_width=True, theme=None)
     with right:
         fig = px.scatter(
             city_summary,
@@ -470,7 +561,7 @@ def product_geography(df: pd.DataFrame) -> None:
             labels={"active_customers": "Active Customers", "total_revenue": "Revenue"},
         )
         fig.update_layout(showlegend=False, margin=dict(l=10, r=10, t=50, b=10))
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, theme=None)
 
     st.subheader("Top Products")
     product_summary_display = format_display_frame(
@@ -519,10 +610,10 @@ def data_quality(validation: pd.DataFrame) -> None:
         barmode="group",
         title="Validation Checks by Stage",
         labels={"stage": "Pipeline Stage", "size": "Check Count"},
-        color_discrete_map={"pass": "#2f855a", "fail": "#c53030"},
+        color_discrete_map={"pass": "#2ea043", "fail": "#e5534b"},
     )
     fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, use_container_width=True, theme=None)
     pass_rate = (validation["status"].eq("pass").mean() * 100) if not validation.empty else 0.0
     if pass_rate == 100.0:
         st.success("All pipeline validation checks are currently passing.")
@@ -577,6 +668,17 @@ def main() -> None:
         product_geography(filtered)
     with tabs[4]:
         data_quality(model_data["validation"])
+    st.markdown(
+        """
+        <div class="mg-footer">
+            Built by <a href="https://github.com/Suhas5497">Suhas Dhamapurkar</a> — Data Analyst &amp; AI/ML Engineer
+            · <a href="https://github.com/Suhas5497/sales-intelligence-platform">Source code</a>
+            · <a href="https://linkedin.com/in/suhas-1710d">LinkedIn</a>
+            · <a href="https://resilytics.in">Resilytics</a>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
 
 if __name__ == "__main__":
