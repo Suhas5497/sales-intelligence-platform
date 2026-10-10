@@ -9,6 +9,9 @@
 <img src="https://img.shields.io/badge/Power_BI-0a0e1a?style=for-the-badge" alt="Power BI">
 <img src="https://img.shields.io/badge/Plotly-0a0e1a?style=for-the-badge&logo=plotly&logoColor=c9a96e" alt="Plotly">
 
+
+<a href="https://sales-intelligence-platform-dovb9bnzxw69tvcorxpqqz.streamlit.app/"><img src="assets/live-demo.svg" height="44" alt="Open the live app"></a>
+
 </div>
 
 <div align="center">
