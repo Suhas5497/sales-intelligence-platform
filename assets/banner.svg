@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="280" viewBox="0 0 840 280" role="img" aria-label="Retail Sales Intelligence Platform — Raw CSVs to a validated star-schema warehouse, a business SQL layer, and an interactive Streamlit + Power BI dashboard.">
+<defs><linearGradient id="rule" x1="0" x2="1"><stop offset="0" stop-color="#c9a96e" stop-opacity=".5"/><stop offset="1" stop-color="#c9a96e" stop-opacity="0"/></linearGradient></defs>
+<rect x=".5" y=".5" width="839" height="279" rx="14" fill="#0a0e1a" stroke="#1d2438"/>
+<text x="44" y="50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" letter-spacing="3.2" fill="#c9a96e">ANALYTICS ENGINEERING · RETAIL</text>
+<rect x="387" y="45.5" width="260" height="1" fill="url(#rule)"/>
+<text x="796" y="50" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" letter-spacing="3.2" fill="#8a8d99">SUHAS DHAMAPURKAR</text>
+<text x="44" y="102" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#e8e6e1">Retail Sales Intelligence Platform</text>
+<text x="44" y="134" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#a7a9b4">Raw CSVs to a validated star-schema warehouse, a business SQL layer,</text>
+<text x="44" y="156" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#a7a9b4">and an interactive Streamlit + Power BI dashboard.</text>
+<rect x="44" y="182" width="179" height="68" rx="10" fill="#0d1220" stroke="#1d2438"/>
+<text x="60" y="214" font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#c9a96e">300K</text>
+<text x="60" y="236" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" fill="#8a8d99">orders processed</text>
+<rect x="235" y="182" width="179" height="68" rx="10" fill="#0d1220" stroke="#1d2438"/>
+<text x="251" y="214" font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#c9a96e">4</text>
+<text x="251" y="236" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" fill="#8a8d99">star-schema tables</text>
+<rect x="426" y="182" width="179" height="68" rx="10" fill="#0d1220" stroke="#1d2438"/>
+<text x="442" y="214" font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#c9a96e">20/20</text>
+<text x="442" y="236" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" fill="#8a8d99">data-quality checks pass</text>
+<rect x="617" y="182" width="179" height="68" rx="10" fill="#0d1220" stroke="#1d2438"/>
+<text x="633" y="214" font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#c9a96e">7</text>
+<text x="633" y="236" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" fill="#8a8d99">SQL analysis modules</text>
+</svg>

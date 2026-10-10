@@ -1,4 +1,19 @@
-# Retail Sales Intelligence Platform
+<div align="center">
+
+<img src="assets/banner.svg" width="100%" alt="Retail Sales Intelligence Platform — 300K orders, star-schema warehouse, 20/20 data-quality checks.">
+
+<img src="https://img.shields.io/badge/Python-0a0e1a?style=for-the-badge&logo=python&logoColor=c9a96e" alt="Python">
+<img src="https://img.shields.io/badge/SQL-0a0e1a?style=for-the-badge" alt="SQL">
+<img src="https://img.shields.io/badge/DuckDB-0a0e1a?style=for-the-badge&logo=duckdb&logoColor=c9a96e" alt="DuckDB">
+<img src="https://img.shields.io/badge/Streamlit-0a0e1a?style=for-the-badge&logo=streamlit&logoColor=c9a96e" alt="Streamlit">
+<img src="https://img.shields.io/badge/Power_BI-0a0e1a?style=for-the-badge" alt="Power BI">
+<img src="https://img.shields.io/badge/Plotly-0a0e1a?style=for-the-badge&logo=plotly&logoColor=c9a96e" alt="Plotly">
+
+</div>
+
+<div align="center">
+<img src="reports/review_frames/frame_0.png" width="90%" alt="Streamlit executive overview: revenue, orders, customers, AOV and monthly trend">
+</div>
 
 Retail Sales Intelligence Platform is an end-to-end analytics engineering project built for Data Analyst and Data Engineer portfolio use. It takes retail transaction data from raw CSV files to a cleaned analytical dataset, star-schema warehouse, business SQL layer, and an interactive Streamlit dashboard.
 
@@ -101,7 +116,6 @@ sales-intelligence-platform/
 |   |-- dim_product.csv
 |   |-- fact_sales.csv
 |   `-- sales.duckdb
-|-- SALES ANALYSIS DASHBOARD.pbix
 |-- SALES INTELLIGENCE DASHBOARD.pbix
 |-- README.md
 `-- requirements.txt
@@ -195,7 +209,6 @@ The repository includes Power BI dashboard files as companion BI assets:
 
 - `SALES INTELLIGENCE DASHBOARD.pbix`
 
-
 Power BI skills demonstrated in these reports:
 
 - KPI card design for revenue, orders, units, and AOV
@@ -243,14 +256,6 @@ Including Power BI in this project helps demonstrate that the same warehouse can
 For recruiters, this is useful because it shows both analytics engineering capability and practical dashboarding skill in a standard business intelligence tool.
 
 Streamlit is the primary review path because it is easier to run from the repository, but the `.pbix` files are included to show hands-on BI reporting capability beyond Python dashboards.
-
-### README Screenshot Placement
-
-To show the Power BI dashboard directly in GitHub, export the report page as PNG and save it under:
-
-- `reports/assets/powerbi_sales_intelligence_dashboard.png`
-
-After that, these images can be embedded in the README as dashboard previews.
 
 ## How To Run
 
@@ -301,6 +306,10 @@ Potential next steps without changing the non-ML focus:
 - add scheduled refresh or orchestration metadata
 - add downloadable stakeholder reports from Streamlit
 
-## Author
 
-Suhas Dhamapurkar
+---
+
+<div align="center">
+<sub>Built by <a href="https://github.com/Suhas5497"><b>Suhas Dhamapurkar</b></a> — Data Analyst &amp; AI/ML Engineer · Founder of <a href="https://resilytics.in">Resilytics</a><br>
+<a href="https://linkedin.com/in/suhas-1710d">LinkedIn</a> · <a href="https://portfolio-git-main-suhasdhamapurkar1710-gmailcoms-projects.vercel.app/">Portfolio</a> · <a href="mailto:suhasdhamapurkar1710@gmail.com">Email</a></sub>
+</div>
